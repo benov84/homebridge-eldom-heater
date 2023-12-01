@@ -1,0 +1,94 @@
+{
+  "pluginAlias": "EldomHeater",
+  "pluginType": "accessory",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "minLength": 1,
+        "required": true
+      },
+      "device_id": {
+        "title": "Device ID",
+        "type": "string",
+        "required": true
+      },
+      "device_body_id": {
+        "title": "Device Body ID",
+        "type": "string",
+        "required": true
+      },
+      "bearer": {
+        "title": "Bearer Token",
+        "type": "string",
+        "required": true
+      },
+      "crc": {
+        "title": "CRC",
+        "type": "string",
+        "required": true
+      },
+      "maxTemp": {
+        "title": "Max Temperature",
+        "type": "integer",
+        "default": 30
+      },
+      "minTemp": {
+        "title": "Min Temperature",
+        "type": "integer",
+        "default": 10
+      },
+      "pullInterval": {
+        "title": "Pull Interval",
+        "type": "integer",
+        "default": 10000
+      },
+      "manufacturer": {
+        "name": "Manufacturer",
+        "type": "string"
+      },
+      "model": {
+        "name": "Model",
+        "type": "string"
+      }
+    }
+  },
+  "layout": [
+    "name",
+    {
+      "type": "section",
+      "title": "My Eldom Settings",
+      "expandable": true,
+      "expanded": true,
+      "items": [
+        "bearer",
+        "crc"
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Device Settings",
+      "expandable": true,
+      "expanded": true,
+      "items": [
+        "device_id",
+        "device_body_id",
+        "maxTemp",
+        "minTemp"
+      ]
+    },
+    "pullInterval",
+    {
+      "type": "section",
+      "title": "Manufacturer Settings",
+      "expandable": true,
+      "expanded": false,
+      "items": [
+        "manufacturer",
+        "model"
+      ]
+    }
+  ]
+}

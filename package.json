@@ -1,0 +1,41 @@
+{
+  "name": "homebridge-eldom-heater",
+  "displayName": "Homebridge Eldom Heater",
+  "version": "1.0.11",
+  "description": "Eldom heater plugin for homebridge: https://github.com/homebridge/homebridge",
+  "license": "ISC",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "node": ">=10.17.0",
+    "homebridge": ">=1.0.0"
+  },
+  "author": "Dobriyan Benov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benov84/homebridge-eldom-heater.git"
+  },
+  "dependencies": {
+    "homebridge-http-base": "2.1.6",
+    "request": "^2.88.2"
+  },
+  "bugs": {
+    "url": "https://github.com/benov84/homebridge-eldom-heater/issues"
+  },
+  "homepage": "https://github.com/benov84/homebridge-eldom-heater#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/benovi"
+    },
+    {
+      "type": "revolut",
+      "url": "https://revolut.me/benov"
+    }
+  ]
+}
