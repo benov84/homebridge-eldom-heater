@@ -12,6 +12,8 @@ You nead to catch network traffic from Eldom app to get token and other values n
 
 I have done this with Proxyman for iOS
 
+The Authentication Token expires after some time and need to be updated with the new one. If I have time in the future, I will try to find a way to get and update this token automatically.
+
 ## Installation
 
 1. Install [homebridge](https://github.com/homebridge/homebridge#installation-details)

@@ -188,14 +188,17 @@ class EldomHeater {
         that.service.getCharacteristic(Characteristic.Active).updateValue(Characteristic.Active.INACTIVE);
         throw new Error(error);
       }
-      var data = JSON.parse(response.body);
+      try {
+        var data = JSON.parse(response.body);
 
-      if (data.Operation == "16")
-        that.service.getCharacteristic(Characteristic.Active).updateValue(Characteristic.Active.ACTIVE);
-      else
-        that.service.getCharacteristic(Characteristic.Active).updateValue(Characteristic.Active.INACTIVE);
-
-      that.pullTimer.start();
+        if (data.Operation == "16")
+          that.service.getCharacteristic(Characteristic.Active).updateValue(Characteristic.Active.ACTIVE);
+        else
+          that.service.getCharacteristic(Characteristic.Active).updateValue(Characteristic.Active.INACTIVE);
+  
+        that.pullTimer.start();
+      } catch {}
+      
       return;
     });
   }
